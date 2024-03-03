@@ -95,7 +95,7 @@ def get_temperatures(start, end = None):
         return jsonify(temperatures)
     else:
         session.close()
-        return return_msg
+        return jsonify({"error": return_msg}), 404 
     
 
 #################################################
